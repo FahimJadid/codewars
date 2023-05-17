@@ -9,7 +9,7 @@ The input string will only consist of lower case letters and/or spaces.
 */
 
 // My solutions
-
+// 1
 function getCount(str) {
   let counter = 0;
   const vowels = ['a', 'e', 'i', 'o', 'u'];
