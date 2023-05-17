@@ -15,6 +15,7 @@ Examples:(Input --> Output)
 */
 
 // 1
+
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
   const rootOfSq = Math.sqrt(sq);
@@ -25,12 +26,14 @@ function findNextSquare(sq) {
 }
 
 // 2
+
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
   return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
 }
 
 // 3
+
 function findNextSquare(sq) {
   const root = Math.sqrt(sq);
   return root % 1 ? -1 : ++root * root;
