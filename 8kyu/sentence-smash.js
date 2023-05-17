@@ -42,3 +42,13 @@ function smash(words) {
   }
   return sentence;
 }
+
+// 5
+
+const smash = (words) => {
+  let sentence = '';
+  for (let word of words) {
+    sentence += word.concat(' ');
+  }
+  return sentence.trim();
+};
