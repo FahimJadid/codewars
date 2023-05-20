@@ -67,11 +67,11 @@ const openOrSenior = (data) => {
 
 // 6
 function openOrSenior(data) {
-  let result = [];
+  let output = [];
   data.map((member) => {
     member[0] >= 55 && member[1] > 7
-      ? result.push('Senior')
-      : result.push('Open');
+      ? output.push('Senior')
+      : output.push('Open');
   });
-  return result;
+  return output;
 }
