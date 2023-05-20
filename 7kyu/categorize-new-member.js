@@ -44,3 +44,34 @@ const openOrSenior = (data) => {
 };
 
 // 4
+function openOrSenior(data) {
+  let result = [];
+  data.map((member) => {
+    if (member[0] >= 55 && member[1] > 7) {
+      result.push('Senior');
+    } else {
+      result.push('Open');
+    }
+  });
+  return result;
+}
+
+// 5
+
+const openOrSenior = (data) => {
+  function membership(member) {
+    return member[0] >= 55 && member[1] > 7 ? 'Senior' : 'Open';
+  }
+  return data.map(membership);
+};
+
+// 6
+function openOrSenior(data) {
+  let result = [];
+  data.map((member) => {
+    member[0] >= 55 && member[1] > 7
+      ? result.push('Senior')
+      : result.push('Open');
+  });
+  return result;
+}
