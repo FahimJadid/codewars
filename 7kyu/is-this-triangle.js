@@ -16,6 +16,20 @@ function isTriangle(a, b, c) {
   return a + b > c;
 }
 
+// 2
+
+function isTriangle(a, b, c) {
+  if (a > 0 && b > 0 && c > 0) {
+    if (a < b + c && b < a + c && c < a + b) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
 // 3
 function isTriangle(a, b, c) {
   return a + b > c && a + c > b && b + c > a;
