@@ -7,3 +7,22 @@ Implement a function that accepts 3 integer values a, b, c. The function should 
 */
 
 // My solutions
+
+// 1
+
+function isTriangle(a, b, c) {
+  // Check if any of the sides is negative
+  if (a < 0 || b < 0 || c < 0) {
+    return false;
+  }
+
+  // Check if any of the sides are equal
+  if (a === b && b === c) {
+    return false;
+  }
+
+  // Check if the sum of any two sides is less than or equal to the third side
+  return a + b > c && a + c > b && b + c > a;
+}
+
+// 2
