@@ -43,3 +43,6 @@ function isTriangle(a, b, c) {
 function isTriangle(a, b, c) {
   return a + b > c && a + c > b && b + c > a;
 }
+
+// 4
+let isTriangle = (a, b, c) => Math.max(a, b, c) < (a + b + c) / 2;
