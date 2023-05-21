@@ -39,34 +39,47 @@ const isTriangle = (a, b, c) => Math.max(a, b, c) < (a + b + c) / 2;
 
 // 5
 const isTriangle = (a, b, c) => {
-  const angles = [a, b, c].sort();
-  return angles[0] + angles[1] > angles[2];
+  const arr = [a, b, c].sort();
+  return arr[0] + arr[1] > arr[2];
+  //   return arr[2] < arr[0] + arr[1];
 };
 
-//   6
-function isTriangle(a, b, c) {
-  var max = Math.max(a, b, c);
-  return a + b + c - max > max;
-}
+// 6
 
 function isTriangle(a, b, c) {
-  return a + b > c && a + c > b && b + c > a;
+  let max = Math.max(a, b, c);
+  return max < (a + b + c) / 2;
 }
 
+// 6.1
+const isTriangle = (a, b, c) => {
+  let max = Math.max(a, b, c);
+  let sum = a + b + c;
+  return sum - max > max;
+};
+
+// 6.2
+
 function isTriangle(a, b, c) {
-  return b + c > a && a + b > c && a + c > b;
+  let max = Math.max(a, b, c);
+  return max < a + b + c - max;
 }
+
+// 7
 
 function isTriangle(a, b, c) {
   const s = a / 2 + b / 2 + c / 2;
   return s * (s - a) * (s - b) * (s - c) > 0;
 }
 
+// 8
+
 function isTriangle(a, b, c) {
   if (a + b > c && b + c > a && a + c > b) return true;
   else return false;
 }
 
+// 9
 function isTriangle(a, b, c) {
   return a + b > c && Math.abs(a - b) < c;
 }
