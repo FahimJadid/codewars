@@ -26,3 +26,15 @@ function isTriangle(a, b, c) {
 }
 
 // 2
+
+function isTriangle(a, b, c) {
+  if (a < 0 || b < 0 || c < 0) {
+    return false;
+  }
+
+  if (a === b && b === c) {
+    return false;
+  }
+
+  return Math.max(a, b, c) < Math.min(a + b, a + c, b + c);
+}
