@@ -38,8 +38,8 @@ If you are given an array with multiple answers, return the lowest correct index
 function findEvenIndex(arr) {
   //Code goes here!
   for (let i = 0; i < arr.length; i++) {
-    const leftSum = arr.slice(0, i).reduce((a, b) => a + b, 0);
-    const rightSum = arr.slice(i + 1).reduce((a, b) => a + b, 0);
+    const leftSum = arr.slice(0, i).reduce((acc, cur) => acc + cur, 0);
+    const rightSum = arr.slice(i + 1).reduce((acc, cur) => acc + cur, 0);
 
     if (leftSum === rightSum) {
       return i;
@@ -48,12 +48,24 @@ function findEvenIndex(arr) {
   return -1;
 }
 
-//  2
+// 2
+function findEvenIndex(arr) {
+  let left = 0;
+  let right = arr.reduce((acc, cur) => acc + cur, 0);
+  for (let i = 0; i < arr.length; i++) {
+    right -= arr[i];
+    if (left === right) return i;
+    left += arr[i];
+  }
+  return -1;
+}
+
+//  3
 
 function findEvenIndex(arr) {
   let left = 0;
-  let right = arr.reduce(function (prev, curv) {
-    return prev + curv;
+  let right = arr.reduce(function (acc, cur) {
+    return acc + cur;
   }, 0);
   for (var i = 0; i < arr.length; i++) {
     if (i > 0) left += arr[i - 1];
@@ -65,8 +77,26 @@ function findEvenIndex(arr) {
   return -1;
 }
 
-// 3
+// 4
 
-const sum = (a, from, to) => a.slice(from, to).reduce((a, b) => a + b, 0);
+const sum = (a, from, to) =>
+  a.slice(from, to).reduce((acc, cur) => acc + cur, 0);
 const findEvenIndex = (a) =>
   a.findIndex((el, i) => sum(a, 0, i) === sum(a, i + 1));
+
+// 5
+
+function findEvenIndex(arr) {
+  const sum = (arr) => arr.reduce((acc, cur) => acc + cur, 0);
+  return arr.findIndex(function (el, i, arr) {
+    return sum(arr.slice(0, i)) === sum(arr.slice(i + 1, arr.length));
+  });
+}
+
+// 6
+function findEvenIndex(arr) {
+  const sum = (arr) => arr.reduce((acc, cur) => acc + cur, 0);
+  return arr.findIndex(
+    (val, idx) => sum(arr.slice(0, idx)) === sum(arr.slice(idx + 1))
+  );
+}
