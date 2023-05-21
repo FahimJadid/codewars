@@ -38,3 +38,8 @@ function isTriangle(a, b, c) {
 
   return Math.max(a, b, c) < Math.min(a + b, a + c, b + c);
 }
+
+// 3
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a;
+}
