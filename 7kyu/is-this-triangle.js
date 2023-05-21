@@ -11,32 +11,9 @@ Implement a function that accepts 3 integer values a, b, c. The function should 
 // 1
 
 function isTriangle(a, b, c) {
-  // Check if any of the sides is negative
-  if (a < 0 || b < 0 || c < 0) {
-    return false;
-  }
+  [a, b, c] = [a, b, c].sort((x, y) => x - y);
 
-  // Check if any of the sides are equal
-  if (a === b && b === c) {
-    return false;
-  }
-
-  // Check if the sum of any two sides is less than or equal to the third side
-  return a + b > c && a + c > b && b + c > a;
-}
-
-// 2
-
-function isTriangle(a, b, c) {
-  if (a < 0 || b < 0 || c < 0) {
-    return false;
-  }
-
-  if (a === b && b === c) {
-    return false;
-  }
-
-  return Math.max(a, b, c) < Math.min(a + b, a + c, b + c);
+  return a + b > c;
 }
 
 // 3
