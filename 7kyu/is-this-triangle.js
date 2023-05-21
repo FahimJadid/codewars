@@ -37,3 +37,8 @@ function isTriangle(a, b, c) {
 
 // 4
 let isTriangle = (a, b, c) => Math.max(a, b, c) < (a + b + c) / 2;
+
+function isTriangle(a, b, c) {
+  var sides = [a, b, c].sort();
+  return sides[0] + sides[1] > sides[2];
+}
