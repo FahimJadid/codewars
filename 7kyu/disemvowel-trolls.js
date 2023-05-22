@@ -33,3 +33,12 @@ const disemvowel = (str) =>
     .split('')
     .filter((char) => 'aeiouAEIOU'.indexOf(char) === -1)
     .join('');
+
+// 3
+const disemvowel = (str) => {
+  let vowels = 'aeiou';
+  return str
+    .split('')
+    .map((char) => (vowels.indexOf(char.toLowerCase()) === -1 ? char : ''))
+    .join('');
+};
