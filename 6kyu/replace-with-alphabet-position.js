@@ -81,7 +81,20 @@ function alphabetPosition(text) {
   return text
     .toLowerCase()
     .split('')
-    .filter((t) => letters.indexOf(t) > -1)
-    .map((t) => letters.indexOf(t) + 1 || '')
+    .filter((char) => letters.indexOf(char) > -1)
+    .map((char) => letters.indexOf(char) + 1 || '')
+    .join(' ');
+}
+
+// 6
+
+function alphabetPosition(text) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+  return text
+    .toLowerCase()
+    .split('')
+    .filter((letter) => alphabet.includes(letter))
+    .map((letter) => alphabet.indexOf(letter) + 1)
     .join(' ');
 }
