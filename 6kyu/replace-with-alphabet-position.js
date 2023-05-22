@@ -45,3 +45,19 @@ function alphabetPosition(text) {
 
   return result;
 }
+
+// 3
+
+function alphabetPosition(text) {
+  const lowercaseText = text.toLowerCase();
+  let result = '';
+
+  for (const char of lowercaseText) {
+    if (char >= 'a' && char <= 'z') {
+      const position = char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+      result += position + ' ';
+    }
+  }
+
+  return result.trim();
+}
