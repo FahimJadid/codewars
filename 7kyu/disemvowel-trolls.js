@@ -17,13 +17,19 @@ Note: for this kata y isn't considered a vowel.
 // 1
 function disemvowel(str) {
   let newStr = '';
-  let comment = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
   for (const letter of str) {
-    if (!comment.includes(letter)) {
+    if (!vowels.includes(letter)) {
       newStr += letter;
     }
   }
   return newStr;
 }
 
-//
+//2
+
+const disemvowel = (str) =>
+  str
+    .split('')
+    .filter((char) => 'aeiouAEIOU'.indexOf(char) === -1)
+    .join('');
