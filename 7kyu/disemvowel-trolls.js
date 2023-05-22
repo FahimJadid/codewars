@@ -42,3 +42,11 @@ const disemvowel = (str) => {
     .map((char) => (vowels.indexOf(char.toLowerCase()) === -1 ? char : ''))
     .join('');
 };
+
+// 4
+const disemvowel = (str) => {
+  return str
+    .split('')
+    .map((char) => ('aeiou'.indexOf(char.toLowerCase()) === -1 ? char : ''))
+    .join('');
+};
