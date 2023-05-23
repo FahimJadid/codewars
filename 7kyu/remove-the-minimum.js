@@ -17,11 +17,11 @@ Examples
 */
 
 // My solutions
-
 function removeSmallest(numbers) {
   if (numbers.length === 0) {
     return [];
   }
+
   const minIndex = numbers.indexOf(Math.min(...numbers));
-  return numbers.filter();
+  return numbers.filter((_, index) => index !== minIndex);
 }
