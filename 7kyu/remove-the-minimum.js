@@ -34,3 +34,13 @@ function removeSmallest(numbers) {
   const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
+
+function removeSmallest(numbers) {
+  if (numbers.length === 0) {
+    return [];
+  }
+
+  const sortedNumbers = [...numbers].sort((a, b) => a - b);
+  const minIndex = numbers.indexOf(sortedNumbers[0]);
+  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
+}
