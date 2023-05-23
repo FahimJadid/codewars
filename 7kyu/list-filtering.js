@@ -22,3 +22,14 @@ function filter_list(l) {
     return typeof item === 'number';
   });
 }
+
+// 3
+function filter_list(l) {
+  let filtered = [];
+  for (const item of l) {
+    if (typeof item === 'number') {
+      filtered.push(item);
+    }
+  }
+  return filtered;
+}
