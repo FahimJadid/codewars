@@ -33,3 +33,14 @@ function filter_list(l) {
   }
   return filtered;
 }
+
+// 4
+
+const filter_list = (l) => {
+  return l.reduce((acc, cur) => {
+    if (typeof cur === 'number') {
+      acc.push(cur);
+    }
+    return acc;
+  }, []);
+};
