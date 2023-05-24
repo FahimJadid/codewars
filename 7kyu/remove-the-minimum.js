@@ -34,3 +34,14 @@ function removeSmallest(numbers) {
   }
   return numbers;
 }
+
+// 2
+
+function removeSmallest(numbers) {
+  if (numbers.length < 1) {
+    return numbers;
+  }
+
+  const minNumber = Math.min(...numbers);
+  return numbers.filter((num) => num !== minNumber);
+}
