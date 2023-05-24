@@ -26,6 +26,7 @@ Examples
 //   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 // }
 
+// 1
 function removeSmallest(numbers) {
   if (numbers.length < 1) {
     return numbers;
@@ -36,12 +37,11 @@ function removeSmallest(numbers) {
 }
 
 // 2
-
 function removeSmallest(numbers) {
-  if (numbers.length < 1) {
-    return numbers;
+  if (numbers.length === 0) {
+    return [];
   }
 
-  const minNumber = Math.min(...numbers);
-  return numbers.filter((num) => num !== minNumber);
+  const minIndex = numbers.indexOf(Math.min(...numbers));
+  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
