@@ -17,58 +17,20 @@ Examples
 */
 
 // My solutions
-function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
-  const minIndex = numbers.indexOf(Math.min(...numbers));
-  return numbers.filter((_, index) => index !== minIndex);
-}
-
-function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
-  const minIndex = numbers.indexOf(Math.min(...numbers));
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
-}
+// function removeSmallest(numbers) {
+//   if (numbers.length === 0) {
+//     return [];
+//   }
+//   const sorted = [...numbers].sort((a, b) => a - b);
+//   const minIndex = numbers.indexOf(sorted[0]);
+//   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
+// }
 
 function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
+  if (numbers.length < 1) {
+    return numbers;
+  } else {
+    numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
   }
-
-  const sortedNumbers = [...numbers].sort((a, b) => a - b);
-  const minIndex = numbers.indexOf(sortedNumbers[0]);
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
-}
-
-function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
-  let minIndex = 0;
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] < numbers[minIndex]) {
-      minIndex = i;
-    }
-  }
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
-}
-
-function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
-  const minIndex = numbers.reduce((minIndex, number, currentIndex) => {
-    if (number < numbers[minIndex]) {
-      return currentIndex;
-    }
-    return minIndex;
-  }, 0);
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
+  return numbers;
 }
