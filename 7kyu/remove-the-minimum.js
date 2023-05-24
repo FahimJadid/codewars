@@ -38,20 +38,17 @@ function removeSmallest(numbers) {
 
 // 2
 function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
   const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
 
 // 3
 function removeSmallest(numbers) {
-  if (numbers.length === 0) {
-    return [];
-  }
-
   const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((_, index) => index !== minIndex);
+}
+
+function removeSmallest(numbers) {
+  const smallestIndex = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((num, i) => i !== smallestIndex);
 }
