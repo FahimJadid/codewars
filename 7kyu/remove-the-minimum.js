@@ -55,3 +55,21 @@ function removeSmallest(numbers) {
   const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((_, index) => index !== minIndex);
 }
+
+// 4
+function removeSmallest(numbers) {
+  if (numbers.length === 0) {
+    return [];
+  }
+
+  const minValue = Math.min(...numbers);
+  const result = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] !== minValue) {
+      result.push(numbers[i]);
+    }
+  }
+
+  return result;
+}
