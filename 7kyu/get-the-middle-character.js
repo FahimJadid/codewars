@@ -19,3 +19,11 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 
 The middle character(s) of the word represented as a string.
 */
+
+function getMiddle(word) {
+  let length = word.length;
+  if (length % 2 === 1) {
+    return word[Math.floor(length / 2)];
+  }
+  return word[Math.floor(length / 2) - 1] + word[Math.floor(length / 2)];
+}
