@@ -88,3 +88,13 @@ function getMiddle(word) {
     return word.charAt(middleIndex);
   }
 }
+
+// 7
+function getMiddle(word) {
+  var length = word.length;
+  var middleIndex = Math.floor(length / 2);
+
+  return length % 2 === 0
+    ? word.slice(middleIndex - 1, middleIndex + 1)
+    : word.charAt(middleIndex);
+}
