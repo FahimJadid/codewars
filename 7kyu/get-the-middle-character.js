@@ -74,3 +74,17 @@ function getMiddle(word) {
     return word.charAt(middleIndex);
   }
 }
+
+// 6
+
+function getMiddle(word) {
+  var length = word.length;
+  var middleIndex = Math.floor(length / 2);
+
+  if (length % 2 === 0) {
+    return word.substr(middleIndex - 1, 2);
+  } else {
+    // Odd length, return the middle character
+    return word.charAt(middleIndex);
+  }
+}
