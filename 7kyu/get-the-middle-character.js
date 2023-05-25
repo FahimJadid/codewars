@@ -48,3 +48,29 @@ function getMiddle(word) {
   }
   return word[middleIndex - 1] + word[middleIndex];
 }
+
+// 4
+function getMiddle(word) {
+  var length = word.length;
+  var middleIndex = Math.floor(length / 2);
+
+  if (length % 2 === 0) {
+    return [word.charAt(middleIndex - 1), word.charAt(middleIndex)];
+  } else {
+    return [word.charAt(middleIndex)];
+  }
+}
+
+// 5
+function getMiddle(word) {
+  let length = word.length;
+  let middleIndex = Math.floor(length / 2);
+
+  if (length % 2 === 0) {
+    // Even length, return the middle 2 characters
+    return word.slice(middleIndex - 1, middleIndex + 1);
+  } else {
+    // Odd length, return the middle character
+    return word.charAt(middleIndex);
+  }
+}
