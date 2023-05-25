@@ -39,3 +39,12 @@ function getMiddle(word) {
     return word.charAt(midIndx);
   }
 }
+
+// 3
+function getMiddle(word) {
+  let middleIndex = Math.floor(word.length / 2);
+  if (word.length % 2 === 1) {
+    return word[middleIndex];
+  }
+  return word[middleIndex - 1] + word[middleIndex];
+}
