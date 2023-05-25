@@ -28,26 +28,17 @@ Examples
 
 // 1
 function removeSmallest(numbers) {
-  if (numbers.length < 1) {
-    return numbers;
-  } else {
-    numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
-  }
-  return numbers;
+  const minIndex = numbers.indexOf(Math.min(...numbers));
+  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
 
 // 2
 function removeSmallest(numbers) {
   const minIndex = numbers.indexOf(Math.min(...numbers));
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
-}
-
-// 3
-function removeSmallest(numbers) {
-  const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((_, index) => index !== minIndex);
 }
 
+// 3
 function removeSmallest(numbers) {
   const smallestIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((num, i) => i !== smallestIndex);
