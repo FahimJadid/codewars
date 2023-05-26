@@ -59,3 +59,17 @@ function towerBuilder(floors) {
   }
   return tower;
 }
+
+// 4
+
+function towerBuilder(floors) {
+  let spaces,
+    stars,
+    tower = [];
+  for (let i = 1; i <= floors; i++) {
+    spaces = ' '.repeat(floors - i);
+    stars = '*'.repeat(2 * i - 1);
+    tower.push(`${spaces}${stars}${spaces}`);
+  }
+  return tower;
+}
