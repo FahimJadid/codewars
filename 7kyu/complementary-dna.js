@@ -67,3 +67,15 @@ function DNAStrand(dna) {
     })
     .join('');
 }
+
+// 4
+const dnaStrand = (dna) => {
+  const complementMap = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+
+  return [...dna].map((nucleotide) => complementMap[nucleotide]).join('');
+};
