@@ -49,3 +49,21 @@ const DNAStrand = (dna) => {
   }
   return complementary;
 };
+
+// 3
+
+function DNAStrand(dna) {
+  var complementMap = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+
+  return dna
+    .split('')
+    .map(function (nucleotide) {
+      return complementMap[nucleotide];
+    })
+    .join('');
+}
