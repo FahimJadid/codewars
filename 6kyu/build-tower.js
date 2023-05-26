@@ -46,3 +46,16 @@ function towerBuilder(floors) {
     return spaces + stars + spaces;
   });
 }
+
+// 3
+function towerBuilder(floors) {
+  let tower = [];
+  for (let i = 0; i < floors; i++) {
+    tower.push(
+      ' '.repeat(floors - i - 1) +
+        '*'.repeat(i * 2 + 1) +
+        ' '.repeat(floors - i - 1)
+    );
+  }
+  return tower;
+}
