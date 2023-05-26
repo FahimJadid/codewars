@@ -69,7 +69,7 @@ function DNAStrand(dna) {
 }
 
 // 4
-const dnaStrand = (dna) => {
+const DNAStrand = (dna) => {
   const complementMap = {
     A: 'T',
     T: 'A',
