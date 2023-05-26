@@ -73,3 +73,15 @@ function towerBuilder(floors) {
   }
   return tower;
 }
+
+// 5
+function towerBuilder(floors) {
+  let arr = [];
+  for (let i = 0; i < floors; i++) {
+    arr[i] =
+      ' '.repeat(floors - i - 1) +
+      '*'.repeat(i * 2 + 1) +
+      ' '.repeat(floors - i - 1);
+  }
+  return arr;
+}
