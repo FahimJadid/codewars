@@ -36,3 +36,13 @@ function towerBuilder(floors) {
 
   return tower;
 }
+
+// 2
+
+function towerBuilder(floors) {
+  return Array.from({ length: floors }, (num, i) => {
+    const spaces = ' '.repeat(floors - i - 1);
+    const stars = '*'.repeat(i * 2 + 1);
+    return spaces + stars + spaces;
+  });
+}
