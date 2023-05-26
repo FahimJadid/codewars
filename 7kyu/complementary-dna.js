@@ -34,3 +34,18 @@ function DNAStrand(dna) {
   }
   return complementary;
 }
+
+// 2
+const DNAStrand = (dna) => {
+  let complementaryMapping = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+  let complementary = '';
+  for (let i = 0; i < dna.length; i++) {
+    complementary += complementaryMapping[dna[i]];
+  }
+  return complementary;
+};
