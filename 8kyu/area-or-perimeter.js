@@ -26,3 +26,10 @@ function areaOrPerimeter(length, width) {
 function areaOrPerimeter(length, width) {
   return length === width ? length * length : 2 * (length + width);
 }
+
+const areaOrPerimeter = function (l, w) {
+  let area = l * w;
+  let perimeter = (l + w) * 2;
+
+  return l === w ? area : perimeter;
+};
