@@ -35,3 +35,12 @@ function updateLight(current) {
       return 'Invalid state';
   }
 }
+
+function updateLight(current) {
+  const states = {
+    green: 'yellow',
+    yellow: 'red',
+    red: 'green',
+  };
+  return states[current] || 'Invalid';
+}
