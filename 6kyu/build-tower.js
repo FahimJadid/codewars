@@ -48,6 +48,7 @@ function towerBuilder(floors) {
 }
 
 // 3
+
 function towerBuilder(floors) {
   let tower = [];
   for (let i = 0; i < floors; i++) {
