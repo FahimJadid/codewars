@@ -56,3 +56,11 @@ function updateLight(currentState) {
     return 'Invalid state';
   }
 }
+
+function updateLight(current) {
+  return current === 'yellow'
+    ? 'red'
+    : current === 'green'
+    ? 'yellow'
+    : 'green';
+}
