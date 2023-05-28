@@ -22,3 +22,7 @@ function areaOrPerimeter(length, width) {
     return 2 * (length + width);
   }
 }
+
+function areaOrPerimeter(length, width) {
+  return length === width ? length * length : 2 * (length + width);
+}
