@@ -44,3 +44,15 @@ function updateLight(current) {
   };
   return states[current] || 'Invalid';
 }
+
+function updateLight(currentState) {
+  const states = ['green', 'yellow', 'red'];
+  const currentIndex = states.indexOf(currentState);
+
+  if (currentIndex !== -1) {
+    const nextIndex = (currentIndex + 1) % states.length;
+    return states[nextIndex];
+  } else {
+    return 'Invalid state';
+  }
+}
