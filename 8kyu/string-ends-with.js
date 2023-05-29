@@ -11,7 +11,26 @@ solution('abc', 'd') // returns false
 
 // Solutions
 
+// 1
 function solution(str, ending) {
   // TODO: complete
   return str.endsWith(ending);
 }
+
+// 2
+
+const solution = (str, ending) => str.endsWith(ending);
+
+// 3
+
+function solution(str, ending) {
+  return str.substring(str.length - ending.length) === ending;
+}
+
+// 4
+
+function solution(str, ending) {
+  return str.lastIndexOf(ending) === str.length - ending.length;
+}
+
+// 5
